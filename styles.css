@@ -8,7 +8,7 @@ body {
   
   .container {
     max-width: 600px;
-    margin: 20px auto; /* Centraliza o container na página */
+    margin: 20px auto;
     background-color: #fff;
     border-radius: 5px;
     padding: 20px;
@@ -56,7 +56,7 @@ body {
   
   .task-text {
     flex: 1;
-    word-wrap: break-word; /* Quebra de palavra */
+    word-wrap: break-word;
     overflow-wrap: break-word;
   }
   
