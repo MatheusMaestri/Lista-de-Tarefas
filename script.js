@@ -8,14 +8,12 @@ document.addEventListener('DOMContentLoaded', function () {
     const completedTasks = document.querySelectorAll('.completed').length;
     const progress = totalTasks === 0 ? 0 : (completedTasks / totalTasks) * 100;
     drawChart(progress);
-  
-    // Aplica o background verde apenas às tarefas concluídas
     const taskItems = document.querySelectorAll('.task-item');
     taskItems.forEach(taskItem => {
       if (taskItem.classList.contains('completed')) {
         taskItem.style.backgroundColor = 'lightgreen';
       } else {
-        taskItem.style.backgroundColor = '#f9f9f9'; // Restaura o background padrão para as tarefas não concluídas
+        taskItem.style.backgroundColor = '#f9f9f9';
       }
     });
   }
@@ -74,15 +72,15 @@ document.addEventListener('DOMContentLoaded', function () {
     const target = event.target;
     if (target.classList.contains('remove-btn')) {
       const taskItem = target.parentElement;
-      taskItem.classList.add('removing'); // Adiciona a classe 'removing' à tarefa que está sendo removida
+      taskItem.classList.add('removing');
       taskItem.remove();
       updateProgress();
     } else if (target.classList.contains('complete-btn')) {
       const taskItem = target.parentElement;
       if (taskItem.classList.contains('completed')) {
-        taskItem.classList.remove('completed'); // Remove a marcação de tarefa concluída
+        taskItem.classList.remove('completed');
       } else {
-        taskItem.classList.add('completed'); // Marca a tarefa como concluída
+        taskItem.classList.add('completed');
       }
       updateProgress();
     }
